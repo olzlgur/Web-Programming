@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+	<script>
+	  function cal(n) {
+			if (n == 1)
+				return 1;
+			else
+				return n * cal(n - 1);
+		}
+
+		function factorial() {
+			var num = document.forms["form1"];
+			document.getElementById("result").innerHTML = num[0].value + "! " + "계산 결과는 " + cal(num[0].value) + "입니다.";
+		}
+	
+	</script>
+	<h1> N 팩토리얼 계산값을 입력하시오 </h1>
+	<form id = "form1">
+		<input type = "text" id = "number">
+		<input type = "button" name = "btn" value = "N 팩토리얼 계산" onclick = "factorial()">
+	</form>
+	 <br>
+	   <span id = "result"></span>
+</body>
+</html>

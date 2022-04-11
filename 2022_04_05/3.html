@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h3>아이디와 비밀번호를 입력해주세요.</h3>
+  <script>
+    while(true)
+    {
+      id=prompt('아이디 입력');
+      if(id=='admin1' || id=='admin2' || id == 'admin3') {
+        password=prompt('비밀번호 입력');
+        if(password=='123456'){
+          location.href="login.html"
+          break;
+        }
+        else{
+          continue;
+        }
+      }
+      else {
+        continue;
+      }
+    }
+  </script>
+</body>
+</html>
