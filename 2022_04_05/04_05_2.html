@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="04_05_2.js"></script>
+</head>
+<body>
+  <p>
+    <!-- 버튼을 클릭하면 메세지 창 출력 -->
+    <button type="button" onclick="alert('외부 자바스크립트 파일')">버튼 클릭</button>
+  </p>
+  <script>
+    var obj = null;
+    document.write(typeof 100+"<br>");
+    document.write(typeof obj+"<br>");
+  </script>
+  <script>
+    function getGrade() {
+      kor = 95;
+    }
+    var kor = 100;
+    getGrade();
+    document.write("국어 점수 : " + kor + "<br>");
+    
+    var foo = ['one', 'two', 'three'];
+
+    var one = foo[0];
+    var two = foo[1];
+    var three = foo[2];
+
+    var [one, two, three] = foo;
+    var a = 'Cat' && 'Dog';
+  </script>
+</body>
+</html>
