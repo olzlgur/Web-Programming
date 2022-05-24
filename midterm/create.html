@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KNU</title>
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="create.css">
+</head>
+<body>
+  <div class="nav-wrapper">
+        <div class="blank_left"></div>  
+        <div class="logo">
+          <h1><a href="main.html">KNU</a></h1>
+        </div>
+        <div class="blank_right"></div>
+        <div class="nav">
+         
+        </div>   
+    </div>
+    <div class="body3">
+      <div class="photo-wrapper" style="margin:0 auto;">
+          <btn class="btn_photo">제목 작성</btn>
+          <textarea name="hashtag" rows="5" cols="50" style="color:gray;"></textarea>
+          <!-- <input type="file" name="images" accept="image/*" onchange="setThumbnail(event);"/>    -->
+      </div>
+  </div>
+
+<div class="body3">
+    <div class="photo-wrapper" style="margin:0 auto;">
+        <btn class="btn_photo">사진 선택</btn>
+        <input type="file" name = "images">(사진 첨부 필수!!)
+        <!-- <input type="file" name="images" accept="image/*" onchange="setThumbnail(event);"/>    -->
+    </div>
+</div>
+
+<div class="body4">
+    <div class="hashtag-wrapper" style="margin:0 auto;">
+        <btn class="btn_hashtag">해시태그</btn>
+        <textarea name="hashtag" rows="5" cols="50" style="color:gray;"></textarea>
+        <p style="color:gray; margin-left:10px; font-size:15px;">여러분의 현재 위치를 적어주세요!<br>ex) #경북대학교 #대현동</p>
+    </div>
+</div>
+<div class="body5">
+    <div class="btn-wrapper" style="display:flex; margin:0 auto; width:1000px; padding: 20px; background-color:white; border-radius:10px;">
+        <btn class="btn_desc" style="height: 35px; margin-top: 60px;">내용 입력</btn>
+        <textarea name="body"  placeholder="위치 권한 허용 필수!!" rows="10" cols="50"></textarea>
+    </div>
+</div>
+
+<div class="body6" style="display:none;">
+    <div>
+        <btn class="btn_desc" style="height: 35px; margin-top: 60px;">위도 입력</btn>
+        <textarea name="latitude" id="latitude" rows="1" cols="50"></textarea>
+    </div>
+</div>    
+<div class="body7" style="display:none;">
+    <div>
+        <btn class="btn_desc" style="display:none; height: 35px; margin-top: 60px;">경도 입력</btn>
+        <textarea name="longitude" id="longitude" rows="1" cols="50"></textarea>
+    </div>
+</div>    
+<!--<div id="latitude" name="latitude" style="display:none"></div>
+<div id="longitude" name="longitude" style="display:none"></div>-->
+<div class="body6">
+    <script type="text/javascript">
+        //document.getElementById("latitude").innerHTML = 0.0;
+        //document.getElementById("longitude").innerHTML = 0.0;
+        const latID = document.getElementById("latitude").inner
+
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+
+                var lat = position.coords.latitude, // 위도
+                    lon = position.coords.longitude; // 경도
+                
+                //var locPosition = new kakao.maps.LatLng(lat, lon); // 마커가 표시될 위치를 geolocation으로 얻어온 좌표로 생성합니다
+                document.getElementById("latitude").innerHTML = lat;
+                document.getElementById("longitude").innerHTML = lon;
+            });
+        } else {
+            document.getElementById('latitude').innerHTML = 0.0;
+            document.getElementById('longitude').innerHTML = 0.0;
+        }
+    </script>
+<!--<input type="hidden" name="latitude" id="latitude" value="">
+<input type="hidden" name="longitude" id="longitude" value="">-->
+</div>
+<button type="submit" class ="submit"><a href="main.html">submit</a></button>
+</form>
+
+</body>
+</html>

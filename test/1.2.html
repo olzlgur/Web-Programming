@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h3>이미지 기본 표현</h3>
+  <a href="http://www.w3.org" target="_blank">
+    <figure>
+      <img src="image.jpg" title="W3C 홈페이지로 이동" alt="이미지가 표시되지 않습니다.">
+      <figcaption>[그림 1] HTLM5</figcaption>
+    </figure>
+  </a>
+  <object data="file.pdf" type="application/pdf" width="500" height="200"></object>
+  <form action="/action_page.php" method="POST">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe"><br>
+    <input type="submit" value="Submit">
+  </form>
+  <form action="02_postdata.jsp" method="GET">
+    <h2>입력 데이터 초기화 버튼</h2>
+    <p>이름 : <input type="text" name="name"></p>
+    <p>비밀번호 : <input type="password" placeholder="비밀번호" nmae="psw" required></p>
+    <p></p>
+    <input type="submit" value="전송">
+    <input type="reset" value="다시작성">
+  </form>
+  <textarea rows="5" cols="50"></textarea>
+  <fieldset>
+    <legend>개인 정보 입력</legend>
+    <p>이름 : <input type="text" name="name"></p>
+    <input type="checkbox" name="sex" value="male" checked>남자
+    <input type="checkbox" name="sex" value="female"> 여자<br>
+    이메일 : <input type="email" name="mymail"><br>
+    구글검색 : <input type="search" name="googlesearch"><br>
+    <input type="color" name="color_value" value="#0000ff">
+    <input type="range" name="point" min="0" max="100">
+    <button type="button" onclick="alert('클릭-1 사용')">클릭 -1</button>
+  </fieldset>
+
+  <h3>div/span 공간 분할 조합</h3>
+    <div style="height: 70px; background-color: #FFFF00;">머리말 영역</div>
+    <div style="height: 50px; background-color: #FF00FF;">본문 영역</div>
+    <span style="background-color: #FF0000;">왼쪽 텍스트 영역</span>
+    <span style="background-color: #FFFFFF;">오른쪽 텍스트 영역</span>
+
+  <h3>iframe 공간 분할 예제</h3>
+  <div style="background-color: #FFFF00;">
+    <span>
+      <a href="intro.html" target="if_a">인사말</a>
+    </span>
+    <iframe src="basic.html" width="400" height="200" name="if_a" frameborder="0">
+  </div>
+</body>
+</html>

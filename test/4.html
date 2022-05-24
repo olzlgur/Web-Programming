@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link type="text/css" rel="stylesheet" href="01_cssstyle_external.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    a:link {
+      color: white;
+      background-color: tomato;
+    }
+    a:visited{
+      color: white;
+      background-color: black;
+    }
+    p.one{
+      border-style: solid;
+      border-width: 5px;  
+    }
+    h1[text="attr3"]{
+      color: white;
+      background-color: pink;
+    }
+    div {
+      width: 300px;
+      border: 15px solid green;
+      padding: 50px;
+      margin: 20px;
+    }
+    input:checked + div.d1 {background-color:gray ;}
+    
+    .mp1 {
+      background-color: aqua;
+      color: red;
+      margin-bottom: 40px;
+      padding-left: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="di">
+    di
+  </div>
+  <h1 text="attr3">Universal Selector</h1>
+  <h1 text="attr2" >모두 같은 색상, 같은 크기</h2>
+  <h3>전체적으로 동시에 스타일 적용</h3>
+  <p class="one"><a href="http://www.w3.org">W3C</a></p>  
+  힌트 보기 : <input type="checkbox">
+  <div class="mp1">
+    남대문이 있는 곳이죠
+  </div>
+</body>
+</html>
+
