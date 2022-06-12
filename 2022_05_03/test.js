@@ -4,6 +4,5 @@ const add = (function () {
 })();
 
 add();
-add();
 console.log(add());
 
