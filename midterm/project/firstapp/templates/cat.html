@@ -27,11 +27,11 @@
         </div>   
     </div>
     <div class="categori">
-        <button class = "another">
-            <a href="{% url 'cat' %}">cat</a>
-        </button>
         <button class = "main">
-            cafe
+            cat
+        </button>
+        <button class = "another">
+            <a href="{% url 'home2' %}">cafe</a>
         </button>
         <button class = "another">
             <a href="{% url 'photo' %}">photo</a>
@@ -39,7 +39,7 @@
     </div>
     <div class="card-wrapper">
         {% for blog in blogs %}
-        {% if blog.category == 'cafe' %}
+        {% if blog.category == 'cat' %}
         <div class="card">
             <bdo dir="ltr">
             <div class="card-info">       

@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Blog(models.Model):
-    category = models.CharField(max_length=200) 
+    category = models.CharField(max_length=200, default='cat') 
     title = models.CharField(max_length=200)
     writer = models.CharField(max_length=100)
     pub_date = models.DateTimeField()
